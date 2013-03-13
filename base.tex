@@ -19,8 +19,6 @@
     pdfborder={0 0 0},
 }
 
-
-
 \title{\textbf{Título documento}}
 \author{Manuel Joaquín Díaz Pol}
 \date{Mes 201x}
@@ -48,31 +46,103 @@
 			
 	\chapter{Ejemplos}
 		\section{Lista de ítems}
-			\begin{itemize}
-				\item Objeto 1
-				\item Objeto 2
-			\end{itemize}
+			\subsection{Viñeta}
+				\begin{itemize}
+					\item Objeto 1
+					\item Objeto 2
+				\end{itemize}
+				
+			\subsection{Numerada}
+				\begin{enumerate}
+					\item Objeto 1 
+					\item Objeto 2	
+				\end{enumerate}			
+			
+		\section{Verbatim}
+			\begin{verbatim}
+			Copyright (c) 2012 - Manuel Joaquin Díaz Pol
+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 3 of the License, or (at your option) any later
+ version.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ details.
+
+ You should have received a copy of the GNU General Public License along with
+ this program.  If not, see <http://www.gnu.org/licenses/>.
+\end{verbatim}
+
+		\section{Tablas}
+			\subsection{Sin bordes}
+				\begin{tabular}{ll}
+					Texto 1 & Texto 2\\
+					Texto 3 & Texto 4\\
+				\end{tabular}
+			
+			\subsection{Con bordes}
+				\begin{center}
+				\begin{tabular}{|c|c|c|}
+					\hline
+	 				\textbf{Título 1}& \textbf{Título 2} & \textbf{Título 3}\\
+					\hline
+					1 & 1-0 & RES LCD\\
+					\hline
+					2 & 1-1 & CE LCD\\
+					\hline
+						
+				\end{tabular}
+				\end{center}
+			
+			\subsection{Mixta}
+			\begin{table}[h]
+					\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+						\hline
+						\multicolumn{8}{|c|} {TMOD}\\
+						\hline
+						\multicolumn{4}{|c|} {TIMER1} & \multicolumn{4}{c|} {TIMER0}\\
+						\hline
+						GATE & C/T & M1 & M0 & GATE & C/T & M1 & M0\\
+						(MSB) &&&&&&& (LSB)\\
+						\hline
+						
+					\end{tabular}\end{center}
+					\caption{Bits del registro TMOD}
+					\end{table}
+			
+		\section{Fórmulas}
+			\begin{center}
+				$\frac{1}{1Mhz}\cdot 255 = 0,000255s$
+			\end{center}
+			
+			\begin{center}
+				$V_r = \frac{R2}{R1+R2}\cdot V_c$ 
+			\end{center}
+			
+		\section{Símbolos}
+			\ohm \micro
 		
 		\section{Imágenes}
 			\subsection{Imagen centrada}
 				\begin{figure}[htp]
 					\centering
-					\includegraphics[width=3in]{caja1.png}
+					\includegraphics[width=3in]{imgs/caja1.png}
 					\caption{Texto imagen}
 					\label{}
-				\end{figure}
+				\end{figure}		
 		
 			\subsection{2 imágenes centradas}
 				\begin{figure}[h]
 					\begin{center}$
 					\begin{array}{cc}
-					\includegraphics[width=2.5in]{caja1.eps} &
-					\includegraphics[width=2.5in]{caja1.jpg}
+					\includegraphics[width=2.5in]{imgs/caja1.eps} &
+					\includegraphics[width=2.5in]{imgs/caja1.jpg}
 					\end{array}$
 					\end{center}
 					\caption{Caja EPS y JPG}
 				\end{figure}
-
-		
 
 \end{document}
