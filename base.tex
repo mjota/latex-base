@@ -1,0 +1,78 @@
+\documentclass[11pt,spanish]{report}
+%Gummi|061|=)
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{titlesec}
+\usepackage[bookmarks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{SIunits}
+
+
+\addto{\captionsspanish}{\def\chaptername{}}
+\titleformat{\chapter}[display]{\Huge\bfseries}{}{1ex}{}{} 
+\topmargin=-1cm
+\textheight=8in
+\renewcommand{\labelitemii}{$\diamond$}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+
+
+
+\title{\textbf{Título documento}}
+\author{Manuel Joaquín Díaz Pol}
+\date{Mes 201x}
+
+\usepackage{amsmath}
+\begin{document}
+	\maketitle
+
+	\tableofcontents 
+
+	\chapter{Requerimientos}
+		\section{Confirmados}
+			\begin{itemize}
+				\item texlive-science.
+				\item texlive-lang-spanish
+				\item Compilado con pdftex
+			\end{itemize}
+		
+		\section{No confirmados}
+			\begin{itemize}
+				\item texlive-bibtex-extra
+				\item texlive-formats-extra
+				\item texlive-generic-extra
+			\end{itemize}
+			
+	\chapter{Ejemplos}
+		\section{Lista de ítems}
+			\begin{itemize}
+				\item Objeto 1
+				\item Objeto 2
+			\end{itemize}
+		
+		\section{Imágenes}
+			\subsection{Imagen centrada}
+				\begin{figure}[htp]
+					\centering
+					\includegraphics[width=3in]{caja1.png}
+					\caption{Texto imagen}
+					\label{}
+				\end{figure}
+		
+			\subsection{2 imágenes centradas}
+				\begin{figure}[h]
+					\begin{center}$
+					\begin{array}{cc}
+					\includegraphics[width=2.5in]{caja1.eps} &
+					\includegraphics[width=2.5in]{caja1.jpg}
+					\end{array}$
+					\end{center}
+					\caption{Caja EPS y JPG}
+				\end{figure}
+
+		
+
+\end{document}
